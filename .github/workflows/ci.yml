@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  push:
+    branches: [main, fix/**]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint Awesome List
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check markdown structure
+        run: |
+          # Verify README has required sections
+          for section in "Contents" "Official SDKs" "Contributing" "License"; do
+            if ! grep -q "## $section" README.md; then
+              echo "ERROR: Missing required section '## $section'"
+              exit 1
+            fi
+          done
+          echo "All required sections present."
+
+      - name: Check link format
+        run: |
+          # All list items should follow awesome-list format
+          python3 -c "
+          import re, sys
+          content = open('README.md').read()
+          # Find all list items (excluding placeholder items with italics)
+          items = re.findall(r'^- \[([^\]]+)\]\(([^)]+)\)(.*)', content, re.MULTILINE)
+          errors = []
+          for name, url, desc in items:
+              if not desc.strip().startswith('—') and not desc.strip().startswith('_'):
+                  if desc.strip():
+                      errors.append(f'Bad format: [{name}]({url}){desc}')
+          if errors:
+              print('\n'.join(errors))
+              sys.exit(1)
+          print(f'Checked {len(items)} entries — all formatted correctly.')
+          "
+
+  validate:
+    name: Validate Structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependencies
+        run: pip install pytest
+
+      - name: Run validation tests
+        run: pytest tests/ -v --tb=short
+
+  links:
+    name: Check Links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify internal links
+        run: |
+          python3 -c "
+          import re, sys
+          from pathlib import Path
+          content = open('README.md').read()
+          # Check internal file references
+          internal_links = re.findall(r'\[([^\]]+)\]\((?!https?://)([^)]+)\)', content)
+          errors = []
+          for text, path in internal_links:
+              # Skip image badges and anchors
+              if path.startswith('#') or path.startswith('http'):
+                  continue
+              if not Path(path).exists():
+                  errors.append(f'Broken internal link: [{text}]({path})')
+          if errors:
+              print('\n'.join(errors))
+              sys.exit(1)
+          print(f'All {len(internal_links)} internal links valid.')
+          "
