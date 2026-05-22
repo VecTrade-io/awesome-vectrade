@@ -93,7 +93,7 @@ class TestCIWorkflow:
         assert "contents: read" in ci_content
 
     def test_uses_checkout_v4(self, ci_content):
-        assert "actions/checkout@v4" in ci_content
+        assert "actions/checkout@v6" in ci_content
 
     def test_has_lint_job(self, ci_content):
         assert "lint:" in ci_content or "Lint" in ci_content
@@ -108,7 +108,7 @@ class TestCIWorkflow:
         assert "pytest" in ci_content
 
     def test_uses_python_setup(self, ci_content):
-        assert "actions/setup-python@v5" in ci_content
+        assert "actions/setup-python@v6" in ci_content
 
     def test_checks_markdown_structure(self, ci_content):
         assert "markdown" in ci_content.lower() or "section" in ci_content.lower()
