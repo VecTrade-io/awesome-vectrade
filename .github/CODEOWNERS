@@ -1,1 +1,6 @@
-* @VecTrade-io/sdk-maintainers
+# ─── CODEOWNERS ─────────────────────────────────────────────────────────────
+# Maps file patterns to owners/agents responsible for review.
+
+# ── Default (vt-curator) ───────────────────────────────────────────────────
+*                           @mountek
+README.md                   @mountek
