@@ -1,27 +1,69 @@
 # Awesome VecTrade [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of VecTrade integrations, tools, and community projects.
+[![CI](https://github.com/VecTrade-io/awesome-vectrade/actions/workflows/ci.yml/badge.svg)](https://github.com/VecTrade-io/awesome-vectrade/actions/workflows/ci.yml)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+> A curated list of [VecTrade](https://vectrade.io) integrations, tools, libraries, and community projects.
+
+VecTrade is a unified financial data platform providing real-time quotes, fundamentals, technicals, news, options, earnings, and AI-powered analysis through a single API.
 
 ## Contents
 
 - [Official SDKs](#official-sdks)
-- [Community SDKs](#community-sdks)
-- [AI Framework Integrations](#ai-framework-integrations)
+- [Package Managers](#package-managers)
+- [AI & MCP Integrations](#ai--mcp-integrations)
+- [Developer Tools](#developer-tools)
 - [Example Projects](#example-projects)
+- [Community SDKs](#community-sdks)
 - [Tools & Utilities](#tools--utilities)
 - [Content & Tutorials](#content--tutorials)
+- [Related Projects](#related-projects)
 
 ## Official SDKs
 
-- [vectrade-python](https://github.com/VecTrade-io/vectrade-python) — Official Python SDK
-- [vectrade-node](https://github.com/VecTrade-io/vectrade-node) — Official TypeScript/Node.js SDK
-- [vectrade-cli](https://github.com/VecTrade-io/vectrade-cli) — Cross-platform CLI
-- [vectrade-mcp](https://github.com/VecTrade-io/vectrade-mcp) — MCP Integration Kit (AI IDEs)
-- [finkit](https://github.com/VecTrade-io/finkit) — Financial analysis library (standalone)
+Official client libraries maintained by the VecTrade team.
+
+- [vectrade-python](https://github.com/VecTrade-io/vectrade-python) — Python SDK with async support, type hints, and pandas integration.
+- [vectrade-node](https://github.com/VecTrade-io/vectrade-node) — TypeScript/Node.js SDK with full type safety and tree-shaking.
+- [vectrade-cli](https://github.com/VecTrade-io/vectrade-cli) — Cross-platform CLI built in Go. Available via Homebrew, Scoop, and Docker.
+
+## Package Managers
+
+Distribution channels for the VecTrade CLI.
+
+- [homebrew-vectrade](https://github.com/VecTrade-io/homebrew-vectrade) — Homebrew tap for macOS and Linux.
+- [scoop-vectrade](https://github.com/VecTrade-io/scoop-vectrade) — Scoop bucket for Windows.
+
+## AI & MCP Integrations
+
+Integrations with AI frameworks and model context protocols.
+
+- [vectrade-mcp](https://github.com/VecTrade-io/vectrade-mcp) — Model Context Protocol server for AI IDEs (Cursor, Windsurf, VS Code).
+- [vectrade-ai-provider](https://github.com/VecTrade-io/vectrade-ai-provider) — Vercel AI SDK provider for financial tool calling.
+
+## Developer Tools
+
+Tools for working with the VecTrade API and ecosystem.
+
+- [vectrade-openapi](https://github.com/VecTrade-io/vectrade-openapi) — OpenAPI 3.1 specification with 29 operations across 12 resource groups.
+- [vectrade-sdk-generator](https://github.com/VecTrade-io/vectrade-sdk-generator) — SDK contract validator and cross-language alignment tool.
+- [finkit](https://github.com/VecTrade-io/finkit) — Standalone financial analysis library (technical indicators, risk metrics, portfolio tools).
+
+## Example Projects
+
+Runnable demos and starter templates.
+
+- [Python Quickstart](https://github.com/VecTrade-io/vectrade-examples/tree/main/python) — Basic Python SDK usage patterns.
+- [TypeScript Quickstart](https://github.com/VecTrade-io/vectrade-examples/tree/main/typescript) — TypeScript SDK with async/await.
+- [Vercel AI Chatbot](https://github.com/VecTrade-io/vectrade-examples/tree/main/typescript/vercel-ai-chatbot) — AI chatbot with financial tool calling.
+- [LangChain Agent](https://github.com/VecTrade-io/vectrade-examples/tree/main/python/langchain_agent.py) — Multi-tool research agent with LangChain.
+- [Portfolio Analysis](https://github.com/VecTrade-io/vectrade-examples/tree/main/python/portfolio_analysis.py) — Risk metrics and portfolio optimization with finkit.
 
 ## Community SDKs
 
-> Want to build an SDK in your language? See [the OpenAPI spec](https://github.com/VecTrade-io/openapi) and [SDK guidelines](https://docs.vectrade.io/community/sdk-guidelines).
+Client libraries built by the community.
+
+> Want to build an SDK in your language? See the [OpenAPI spec](https://github.com/VecTrade-io/vectrade-openapi) and [SDK generator](https://github.com/VecTrade-io/vectrade-sdk-generator).
 
 - _Your SDK here — [submit a PR](https://github.com/VecTrade-io/awesome-vectrade/pulls)!_
 
@@ -33,27 +75,22 @@ A curated list of VecTrade integrations, tools, and community projects.
 - vectrade-csharp — C# / .NET client
 -->
 
-## AI Framework Integrations
-
-- [@vectrade/ai-provider](https://github.com/VecTrade-io/vectrade-node) — Vercel AI SDK provider
-- LangChain VecTradeToolkit — _coming soon_
-- CrewAI VecTrade Tools — _coming soon_
-
-## Example Projects
-
-- [quickstart-python](https://github.com/VecTrade-io/examples/tree/main/python) — Python quickstart examples
-- [quickstart-typescript](https://github.com/VecTrade-io/examples/tree/main/typescript) — TypeScript quickstart
-- [vercel-ai-chatbot](https://github.com/VecTrade-io/examples/tree/main/typescript/vercel-ai-chatbot) — AI chatbot with financial tools
-- [langchain-agent](https://github.com/VecTrade-io/examples/tree/main/python/langchain_agent.py) — Multi-tool research agent
-- [portfolio-analysis](https://github.com/VecTrade-io/examples/tree/main/python/portfolio_analysis.py) — Risk metrics with finkit
-
 ## Tools & Utilities
+
+Community-built tools and integrations.
 
 - _Your tool here — [submit a PR](https://github.com/VecTrade-io/awesome-vectrade/pulls)!_
 
 ## Content & Tutorials
 
-- _Your tutorial here — [submit a PR](https://github.com/VecTrade-io/awesome-vectrade/pulls)!_
+Blog posts, videos, and educational content.
+
+- _Your content here — [submit a PR](https://github.com/VecTrade-io/awesome-vectrade/pulls)!_
+
+## Related Projects
+
+- [VecTrade Documentation](https://github.com/VecTrade-io/vectrade-docs) — Official documentation site source.
+- [VecTrade Examples](https://github.com/VecTrade-io/vectrade-examples) — Official example repository.
 
 ---
 
@@ -63,4 +100,6 @@ Contributions welcome! Read the [contribution guidelines](CONTRIBUTING.md) first
 
 ## License
 
-CC0-1.0 — see [LICENSE](LICENSE).
+[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, the authors have waived all copyright and related rights to this work. See [LICENSE](LICENSE).
