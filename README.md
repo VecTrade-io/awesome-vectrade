@@ -67,30 +67,53 @@ Client libraries built by the community.
 
 - _Your SDK here — [submit a PR](https://github.com/VecTrade-io/awesome-vectrade/pulls)!_
 
-<!-- Planned / anticipated:
+<!-- Bounties available for:
 - vectrade-go — Go client
 - vectrade-rust — Rust client
 - vectrade-ruby — Ruby client
 - vectrade-java — Java/Kotlin client
 - vectrade-csharp — C# / .NET client
--->
+Interested? Open an issue and we'll provide guidance + the OpenAPI spec. -->
 
 ## Tools & Utilities
 
 Community-built tools and integrations.
 
-- _Your tool here — [submit a PR](https://github.com/VecTrade-io/awesome-vectrade/pulls)!_
+- [VecTrade Rank Badge](https://vectrade.io/api/badge/USERNAME) — Dynamic SVG badge for GitHub READMEs showing your leaderboard rank. Usage: `![Rank](https://vectrade.io/api/badge/your-username)`
+- [Leaderboard Embed Widget](https://vectrade.io/leaderboard/embed/USERNAME) — Iframe-embeddable rank card for personal websites and blogs.
+- [Weekly Recap Generator](https://github.com/VecTrade-io/vectrade-core/blob/main/scripts/weekly_recap.py) — Auto-generate weekly leaderboard recaps for social media and Discord.
 
 ## Content & Tutorials
 
 Blog posts, videos, and educational content.
 
-- _Your content here — [submit a PR](https://github.com/VecTrade-io/awesome-vectrade/pulls)!_
+- [How to Calculate Sharpe Ratio in Python](https://vectrade.io/blog/python-sharpe-ratio-calculation) — Complete guide with finkit examples and portfolio comparison.
+- [Build a Stock Screener in 10 Lines of Python](https://vectrade.io/blog/python-stock-screener-tutorial) — Rule-based screening with operators, value+momentum example.
+- [Python Technical Indicators Guide](https://vectrade.io/blog/python-technical-indicators-guide) — SMA, EMA, RSI, MACD, Bollinger Bands, ATR, VWAP, OBV with code.
+- [VecTrade MCP Setup Guide](https://docs.vectrade.io/sdks/mcp) — Get 27 financial tools in Claude, Cursor, VS Code, and Windsurf.
+- [Vercel AI Chatbot with Financial Tools](https://github.com/VecTrade-io/vectrade-examples/tree/main/typescript/vercel-ai-chatbot) — Full-stack AI chatbot with VecTrade tool calling.
 
 ## Related Projects
 
 - [VecTrade Documentation](https://github.com/VecTrade-io/vectrade-docs) — Official documentation site source.
 - [VecTrade Examples](https://github.com/VecTrade-io/vectrade-examples) — Official example repository.
+- [VecTrade Status](https://status.vectrade.io) — Uptime monitoring for all VecTrade services.
+
+## Use Cases
+
+Real-world applications built with VecTrade.
+
+- **Earnings Tracker** — Monitor earnings dates and surprise history for a watchlist. ([template](https://github.com/VecTrade-io/vectrade-examples/tree/main/use-cases))
+- **Momentum Scanner** — Daily scanner for stocks breaking 52-week highs with volume confirmation.
+- **AI Research Agent** — LangChain agent that researches stocks using VecTrade tools before generating a report.
+- **Portfolio Risk Dashboard** — Jupyter notebook combining VecTrade API data with finkit risk metrics.
+
+## Community & Support
+
+- 💬 [Discord](https://discord.gg/vectrade) — Community chat, support, and showcase
+- 📖 [Documentation](https://docs.vectrade.io) — Full API reference and guides
+- 🐛 [GitHub Issues](https://github.com/VecTrade-io/vectrade-core/issues) — Bug reports and feature requests
+- 🐦 [X / Twitter](https://x.com/vectrade_io) — Updates, tips, and weekly leaderboard recaps
 
 ---
 
