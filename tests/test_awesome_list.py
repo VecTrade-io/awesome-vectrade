@@ -134,7 +134,6 @@ class TestReadmeSections:
         # Each TOC entry should correspond to an actual section
         for text, anchor in toc_links:
             # Convert section name to anchor format
-            expected_anchor = text.lower().replace(" ", "-").replace("&", "").replace("--", "-")
             # At least check the text matches a section
             assert any(
                 text.lower() in s.lower() for s in h2_sections

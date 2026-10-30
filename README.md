@@ -79,7 +79,7 @@ Interested? Open an issue and we'll provide guidance + the OpenAPI spec. -->
 
 Community-built tools and integrations.
 
-- [VecTrade Rank Badge](https://vectrade.io/api/badge/USERNAME) — Dynamic SVG badge for GitHub READMEs showing your leaderboard rank. Usage: `![Rank](https://vectrade.io/api/badge/your-username)`
+- [VecTrade Rank Badge](https://vectrade.io/api/badge/USERNAME) — Dynamic SVG badge for GitHub READMEs showing your leaderboard rank. Usage: `![Rank](https://vectrade.io/api/badge/your-username)`.
 - [Leaderboard Embed Widget](https://vectrade.io/leaderboard/embed/USERNAME) — Iframe-embeddable rank card for personal websites and blogs.
 - [Weekly Recap Generator](https://github.com/VecTrade-io/vectrade-core/blob/main/scripts/weekly_recap.py) — Auto-generate weekly leaderboard recaps for social media and Discord.
 
@@ -91,7 +91,6 @@ Blog posts, videos, and educational content.
 - [Build a Stock Screener in 10 Lines of Python](https://vectrade.io/blog/python-stock-screener-tutorial) — Rule-based screening with operators, value+momentum example.
 - [Python Technical Indicators Guide](https://vectrade.io/blog/python-technical-indicators-guide) — SMA, EMA, RSI, MACD, Bollinger Bands, ATR, VWAP, OBV with code.
 - [VecTrade MCP Setup Guide](https://docs.vectrade.io/sdks/mcp) — Get 27 financial tools in Claude, Cursor, VS Code, and Windsurf.
-- [Vercel AI Chatbot with Financial Tools](https://github.com/VecTrade-io/vectrade-examples/tree/main/typescript/vercel-ai-chatbot) — Full-stack AI chatbot with VecTrade tool calling.
 
 ## Related Projects
 

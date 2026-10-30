@@ -1,6 +1,5 @@
 """Tests for awesome-vectrade CI workflow and GitHub configuration."""
 
-import re
 from pathlib import Path
 
 import pytest
